@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+}
+body{
+  background-color: #0F0F0F;
+  color: #F8F1E7;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Bouton menu */
+.menu-btn {
+  background: none;
+  border: none;
+  color: #F8F1E7;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: gold;
+}
+
+/* Icônes */
+.icons a {
+  color: #F8F1E7;
+  margin-left: 20px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: gold;
+}
+
+/* Texte de bienvenue */
+.hero-text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+/* Menu latéral */
+.menu {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(10, 10, 10, 0.95);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+/* Bouton fermeture */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 25px;
+  background: none;
+  border: none;
+  color: #F8F1E7;
+  cursor: pointer;
+}
+
+/* Liens du menu */
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 15px 20px;
+}
+
+.menu ul li a {
+  color: #F8F1E7;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.menu ul li a:hover {
+  color: gold;
+}
+footer p{
+  align-items: center;
+  justify-content: center;
+}
+.overlay .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; 
+  margin-left: 4rem;
+  width: 90%
+}
+
+.overlay .content img {
+  max-width: 100%; /* Pour rendre l'image responsive */
+  height: auto;
+  border: .7px  solid rgb(255, 217, 0); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  border-radius: 7px; 
+}
+.models .row .header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #d4af37;
+}
+.models .row .content{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.models .row .content .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left:5rem ;
+  padding: 1rem;
+  border: 1.8px solid #ccc;
+  border-radius: 100px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.models .row .content .logo:hover {
+  transform: scale(1.05);
+  border-color: #d4af37;
+}
+.models .row .content img{
+  width: 150px;
+  height: auto;
+  max-width: 100px;
+}
+.aboutus .row .box-container{
+  display: flex ;
+  flex: 1 1 42rem;
+  gap: 2rem;
+}
+
+.aboutus .row .container img{
+  border-radius: 1.7rem;
+  margin:2rem;
+  display: inline;
+  height: 100%;
+}
+.aboutus .row .box-container .content p{
+  color: #F8F1E7;
+  padding-top: 7rem;
+  background-color: rgba(255, 255, 255, 0.176);
+}
