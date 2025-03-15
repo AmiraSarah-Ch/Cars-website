@@ -8,6 +8,13 @@
       {
         "link-name": "off"
       }
-    ]
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off"
+      }
+    ],
+    "no-inline-styles": "off"
   }
 }

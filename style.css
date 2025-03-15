@@ -9,7 +9,7 @@
         font-family: "Poppins", sans-serif;
 }
 body{
-  background-color: #0F0F0F;;
+  background-color: #1a291a;
   color: #F8F1E7;
 }
 html::-webkit-scrollbar{
@@ -50,7 +50,7 @@ html::-webkit-scrollbar-thumb{
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  background: rgba(0, 0, 0, 0.8);
+  background: #172417ad;
 }
 
 .menu-btn {
@@ -165,49 +165,134 @@ html::-webkit-scrollbar-thumb{
   margin-left: 4rem;
   width: 90%
 }
-
-.models .row .header{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  padding: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #d4af37;
+.models-page h1{
+  text-align: center; 
+  text-transform: uppercase; 
+  font-weight: 500;
+  margin-top: 1.4rem;
+  color: gold;
 }
-.models .row .content{
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 2rem;
+.models-page .row{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: .7rem;
+  margin-right: 2rem;
+  padding: .7rem;
 }
-.models .row .content .logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left:5rem ;
-  padding: 1rem;
-  border: 1.8px solid #ccc;
-  border-radius: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+ .models-page .card{
+  background-color: #d2cfcf;
+  position: relative;
+  width: 360px;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  overflow:hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor:pointer;
+  color: #000000;
+  text-align: start;
 }
-.models .row .content .logo:hover {
-  transform: scale(1.05);
-  border-color: #d4af37;
+.models-page .card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 17px rgba(255, 215, 0, 0.7);
 }
-.models .row .content img{
-  width: 150px;
+.models-page .car-image, .car-video{
+  width: 100%;
   height: auto;
-  max-width: 100px;
+  display: block;
+  border-radius: 10px;
+}
+.models-page .car-video{
+  display: none;
+  border-radius:10px ;
+}
+.models-page .card:hover .car-image{
+  display: none;
+}
+.models-page .card:hover .car-video{
+  display: block;
+}
+
+.card-content {
+  position: relative;
+  width: 100%;
+  height: 300px; 
+  overflow: hidden;
+}
+
+.car-image, .car-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.models-page .card h3, p{
+  margin-top: 5px;
+  margin-left: .5rem;
+}
+.models-page .row .card .btnpkg {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 10px; 
+}
+
+.models-page .row .card .btnpkg button {
+  margin-left: 1rem;
+  margin-right: .6rem;
+  margin-bottom:10px;
+  max-width: 48%; 
+  padding: 10px 15px;
+  text-align: center;
+  background-color: #f2e318;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+.models-page .row .card .btnpkg button:hover {
+  background-color: rgba(255, 215, 0, 0.7); 
+}
+.models-page .models-footer{
+  background-color: #172417ad;
+}
+.models-page .models-footer .row{
+  max-width: 90rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 3rem;
+  color: #f8f1e7;
+  text-decoration: none;
+}
+.models-page .models-footer .row > div{
+  flex: 1;
+  min-width: 200px; 
+  margin: 10px;
+}
+.models-footer h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem; 
+}
+.models-footer a, .models-footer p {
+  display: block; 
+  margin-top: 15px;
+  color: inherit;
+  text-decoration: none;
+}
+.map-container {
+  max-width: 100%; 
+}
+.models-footer .rights{
+  margin-top: -3rem;
+  color: #f8f1e7;
+  padding-left: 3rem;
 }
 .aboutus .row .box-container{
   display: flex ;
   flex: 1 1 42rem;
   gap: 2rem;
 }
-
 .aboutus .row .container img{
   border-radius: 1.7rem;
   margin:2rem;

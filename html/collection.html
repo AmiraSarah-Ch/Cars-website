@@ -14,10 +14,8 @@
     <nav class="navbar">
         <button class="menu-btn" onclick="openMenu()">☰ Menu</button>
         
-        <!-- Logo centré -->
         <a href="index.html" class="logo">Vintage Veloce</a>
-        
-        <!-- Icônes à droite -->
+
         <div class="icons">
             <a href="#"><i class="fas fa-search"></i></a>
             <a href="#"><i class="fas fa-heart"></i></a>
@@ -26,7 +24,6 @@
         </div>
     </nav>
 
-<!-- Menu latéral -->
 <div id="sideMenu" class="menu">
 <button class="close-btn" onclick="closeMenu()">✖</button>
 <ul>
@@ -40,27 +37,244 @@
 </ul>
 </div>
 
-<section class="models">
-    <div class="row">
-        <div class="header">
-            <p>AVAILABLE BRANDS</p>
-        </div>
-        <div class="content">
-            <div class="logo">
-                <img src="../img/rr.png" alt="royce rolls">
-            </div>
-            <div class="logo"><img src="../img/car-logo-png-2296.png" alt=""></div>
-            <div class="logo">
-                <img src="../img/car-logo-png-2325.png" alt="">
-                
-            </div>
-            <div class="logo">
-                <img src="../img/picture-logo-42726.png" alt="">
-            </div>
-        </div>
+<section class="models-page">
+    <h1>Explore Our Iconic Collection</h1>
+        
 
+<div id="purchaseForm" class="form-container" style="display: none;">
+    <h2>Complete Your Purchase</h2>
+    <form action="submit_order.php" method="post">
+        <label for="fullname">Full Name</label>
+        <input type="text" name="fullname" id="fullname" required>
+
+        <label for="email" >Email</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="address">Your Address</label>
+        <input type="text" name="address" id="address" required>
+
+        <label for="phonenumber">Phone Number</label>
+        <input type="tel" name="phonenumber" id="phonenumber">
+
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age">
+
+        <label for="payment">Payment Method</label>
+        <select name="payment" id="payment">
+            <option value="creditCard">CreditCard</option>
+            <option value="paypal">Paypal</option>
+        </select>
+        
+        <button type="submit">Confirm Purchase</button>
+    </form>
+    <button onclick="document.getElementById(purchaseForm).style.display='none'">Close</button>
+</div>
+
+
+<div class="row" >
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/ferrari250gt2.jfif" alt="ferrarigto250" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/ferrari250GTE2+2.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>            
+        </div>
+        <h3>Ferrari 250 GTE 2+2 Serie II</h3>
+        <p>Year: 1961 | Top Speed: 280 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your ferrari</button>
+        </div>
+        
     </div>
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/ferrariGto.jpg" alt="ferrariF40" class="car-image">
+            <video autoplay muted   loop class="car-video" width="300px"heigh="200px";>
+                <source src="../img/ferrariF40.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>Ferrari F40</h3>
+        <p>Year: 1987 | Top Speed: 324 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your ferrari</button>
+        </div>
+    </div>
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/FERRARI F50 - Tom Hartley Jnr.jfif" alt="ferrari50GT" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/12698128_4070_2160_24fps.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+                </div>
+        <h3>Ferrari F50 GT</h3>
+        <p>Year: 1996 | Top Speed: 376 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your ferrari</button>
+        </div>
+    </div>
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/ferrari330gt.jfif" alt="ferrarigto250" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/ferrari330gt2+2.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>Ferrari 330 GTC 2+2 Serie II</h3>
+        <p>Year: 1967 | Top Speed: 242 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your ferrari</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/1959 Porche 356a Coupe_.jfif" alt="ferrarigto250" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/Porsche 356 Coupe walkaround _ 4K _.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>Porshe 356 a coupe</h3>
+        <p>Year: 1959 | Top Speed: 177 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your Porshe</button>
+        </div>
+    </div>
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/porshe911.jpg" alt="ferrarigto250" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/porshe911.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>Porshe 911</h3>
+        <p>Year: 1962 | Top Speed: 280 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your Porshe</button>
+        </div>
+    </div>
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/Porsche 911 Turbo _Whale Tail_.jfif" alt="ferrarigto250" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/porshe911Turbo.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>Porshe 911 Turbo</h3>
+        <p>Year: 1978 | Top Speed: 260.71 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your Porshe</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/Phantom VI.jfif" alt="phantom VI" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/Rolls-Royce Phantom VI Spotted in London _ Brunei Royal Family's Christmas Shopping 2024.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>Rolls-Royce Phantom VI</h3>
+        <p>Year: 1969 | Top Speed: 280 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your Rolls-Royce</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/chevroletImpalat.jfif" alt="ferrarigto250" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/impala.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>chevrolet Impala</h3>
+        <p>Year: 1967 | Top Speed: 209.21 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your Chevrolet</button>
+        </div>
+    </div>
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/1969 Chevrolet Camaro Custom.jfif" alt="ferrarigto250" class="car-image">
+            <video autoplay  muted  loop class="car-video">
+                <source src="../img/camaro.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>chevrolet Camaro</h3>
+        <p>Year: 1969 | Top Speed: 201.17 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your Chevrolet</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="card" >
+        <div class="card-content">
+            <img src="../img/mustangShelby.jfif" alt="ford" class="car-image">
+            <video autoplay  muted loop class="car-video">
+                <source src="../img/mustangShelby.mp4" type="video/mp4">
+                YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG 
+            </video>
+        </div>
+        <h3>Ford Mustang Shelby GT500</h3>
+        <p>Year: 1967 | Top Speed: 206 km/h</p>
+        <div class="btnpkg">
+            <button class="btn" onclick="window.location.href='history.html'">Read more</button>
+            <button class="btn" onclick="buyCar(event)">Buy your Ford</button>
+        </div>
+    </div>
+</div>
 
+    <footer class="models-footer">
+        <div class="row">
+            <div class="aboutvv">
+                <h2>About Vintage Veloce</h2>
+                <a href="../html/aboutus.html">About VV</a>
+                <a href="#">Events</a>
+            </div>
+            <div class="experience">
+                <h2>experience</h2>
+                <a href="../html/collection.html">Buy Car</a>
+            </div>
+            <div class="account">
+                <h2>account</h2>
+                <a href="login.html">Log In</a>    
+            </div>
+            <div class="Contact">
+                <h2>contact us</h2>
+                <p>+1 477 777 111 444</p>   
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105743.76433661293!2d-118.54718845511097!3d34.08251819587151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20Californie%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sdz!4v1742075558498!5m2!1sfr!2sdz" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div> 
+            </div>
+        </div>
+        <p class="rights">&copy; 2025 Vintage Veloce. All rights reserved</p>
+    </footer>
 </section>
     
 </body>
