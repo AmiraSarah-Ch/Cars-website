@@ -280,6 +280,9 @@ html::-webkit-scrollbar-thumb{
   color: inherit;
   text-decoration: none;
 }
+.models-footer a:hover{
+  color: gold;
+}
 .map-container {
   max-width: 100%; 
 }
