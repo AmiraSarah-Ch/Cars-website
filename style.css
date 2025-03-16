@@ -52,7 +52,9 @@ html::-webkit-scrollbar-thumb{
   padding: 20px 50px;
   background: #172417ad;
 }
-
+.menu{
+  z-index: 1;
+}
 .menu-btn {
   background: none;
   border: none;
@@ -90,7 +92,6 @@ html::-webkit-scrollbar-thumb{
   height: 20rem;
   margin-left: 120px;
 }
-
 .hero-text p {
   font-size: 1em;
   margin-top: 0.5rem;
@@ -103,14 +104,13 @@ html::-webkit-scrollbar-thumb{
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  background: rgba(255, 217, 0, 0.991);
+  background: rgba(255, 217, 0, 0.992);
   color: black;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: 0.3s ease;
 }
-
 .btn:hover {
   background: #ffc400;
   transform: scale(1.05);
@@ -200,11 +200,10 @@ html::-webkit-scrollbar-thumb{
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 10px;
+  
 }
 .models-page .car-video{
   display: none;
-  border-radius:10px ;
 }
 .models-page .card:hover .car-image{
   display: none;
@@ -253,10 +252,13 @@ html::-webkit-scrollbar-thumb{
 .models-page .row .card .btnpkg button:hover {
   background-color: rgba(255, 215, 0, 0.7); 
 }
-.models-page .models-footer{
-  background-color: #172417ad;
+.models-page .models-footer .container{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  margin-top: 7rem;
 }
-.models-page .models-footer .row{
+.models-page.models-footer .row{
   max-width: 90rem;
   display: flex;
   justify-content: space-between;
@@ -264,46 +266,54 @@ html::-webkit-scrollbar-thumb{
   padding-left: 3rem;
   color: #f8f1e7;
   text-decoration: none;
+  align-items: center;
 }
-.models-page .models-footer .row > div{
+.models-page.models-footer .row > div{
   flex: 1;
   min-width: 200px; 
   margin: 10px;
 }
 .models-footer h2 {
   margin-bottom: 10px;
-  font-size: 1.3rem; 
+  font-size: 1.2rem; 
+  text-transform: capitalize;
 }
 .models-footer a, .models-footer p {
   display: block; 
-  margin-top: 15px;
+  margin-top: 12px;
   color: inherit;
   text-decoration: none;
 }
 .models-footer a:hover{
   color: gold;
 }
+.footer-card{
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  text-align: start;
+  padding-left: 4rem;
+} 
+.footer-card p{
+  margin-left:-.1rem;
+}
 .map-container {
-  max-width: 100%; 
+  width: 100%;
 }
 .models-footer .rights{
-  margin-top: -3rem;
+  text-align: center;
   color: #f8f1e7;
   padding-left: 3rem;
 }
-.aboutus .row .box-container{
-  display: flex ;
-  flex: 1 1 42rem;
-  gap: 2rem;
+.footer-icons{
+  margin-top: 27px;
+  margin-left: 4rem;
 }
-.aboutus .row .container img{
-  border-radius: 1.7rem;
-  margin:2rem;
-  display: inline;
-  height: 100%;
+.footer-icons i{
+  margin-top: 1rem;
+  padding-right: 2rem;
 }
-.aboutus .row .box-container .content p{
-  color: #F8F1E7;
-  padding-top: 7rem;
-  background-color: rgba(255, 255, 255, 0.176);
+.footer-icons i:hover{
+  color: gold;
 }
