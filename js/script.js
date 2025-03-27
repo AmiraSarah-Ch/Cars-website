@@ -46,3 +46,34 @@ function buyCar(event) {
     // Si connecté, afficher le formulaire d'achat
     document.getElementById("purchaseForm").style.display = "block";
 }
+
+
+
+const msg = document.querySelector(".form-message");
+
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("lE75D7dE9TgX4ZW5U"); 
+    console.log("EmailJS initialized successfully.");
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let parms = {
+            sender_fullname: document.getElementById("fullname").value,
+            sender_phone: document.getElementById("phone").value,
+            sender_email: document.getElementById("email").value,
+            
+            message: document.getElementById("message").value
+        };
+
+        emailjs.send("service_sehaejg", "template_t890nbe", parms)
+            .then(response => {
+                alert("Email Sent Successfully!");
+                console.log("SUCCESS!", response);
+                document.getElementById("contact-form").reset();
+            })
+            .catch(error => {
+                alert("Failed to send email. Please try again.");
+                console.error("ERROR:", error);
+            });
+    });
+});
