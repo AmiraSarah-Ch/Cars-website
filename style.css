@@ -331,6 +331,7 @@ html::-webkit-scrollbar-thumb{
   color: gold;
 }
 .contact .overlay p{
+  font-style: oblique;
   text-align:start;
   padding-left: 20px;
   padding-bottom: 10px;
@@ -454,4 +455,207 @@ margin-bottom: 1.3rem;
 .fail-msg{
   color: red;
   line-height: 3;
+}
+
+.aboutus .box-container{
+  display: flex;
+  gap:2rem;
+  justify-content: space-between;
+  padding: 2rem;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7rem;
+  max-width: 1140px;
+  unicode-bidi: isolate;
+  width: 1100px;
+}
+.aboutus .box-container img{
+  margin-top: 2rem;
+  border-radius: 60px;
+  padding: 2rem;
+  width: 40rem;
+}
+.aboutus .box-container .content1{
+  text-align: start;
+  padding: .5rem;
+}
+.aboutus .box-container .content1 h2{
+  text-align: center;
+  margin-right: 4rem;
+  color: gold;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-style: oblique;
+}
+.aboutus .box-container .content1 p{
+  line-height: 1.9rem;
+  font-style: oblique;
+  font-size: 1rem;
+}
+.aboutus .content2{
+  padding: 3rem;
+  background-color: #2338238d;
+}
+.aboutus .content2 h2{
+  color: gold;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: .6rem;
+  font-style: oblique;
+}
+.aboutus .content2 p{
+  line-height: 1.9rem;
+  font-style: oblique;
+  font-size: 1rem;
+}
+.aboutus .content3{
+  padding: 3rem;
+}
+.aboutus .content3 .boxs-container{
+  display: flex;
+  gap: 2rem;
+}
+.aboutus .content3 h2{
+  padding: 1rem;
+  color: gold;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-style: oblique;
+}
+.aboutus .content3 .box{
+  display: block;
+  grid-template-columns: 1fr 1fr;
+  padding: 1.2rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 rgba(255, 217, 0, 0.992);
+  background-color: #d2cfcf;
+  color: #000000;
+  border-radius: 30px;
+  text-align: center;
+  align-items: center;
+  width: 35%;
+}
+.aboutus .content3 .box .img img{
+  max-width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  overflow: hidden;
+  height: 350px;
+}
+.aboutus .content3 .box .social-icons{
+  color: #000000; 
+}
+.aboutus .content3 .box .social-icons a{
+  text-decoration: none;
+  color: #131212;
+}
+.aboutus .content3 .box .member_info{
+  font-style: oblique;
+}
+.aboutus .content3 .box .member_info h3{
+  color: #e0bf04;
+}
+.aboutus .content4{
+  padding: 2rem;
+  line-height: 2rem;
+  font-style: oblique;
+  background-color: #2338238d;
+}
+.login{
+  font-family: 'Arial', sans-serif;
+  background: rgba(0, 0, 0, 0.228);
+  color: #F8F1E7;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+}
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.login-box {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
+
+.login-container .logo {
+  width: 120px;
+  margin-bottom: rem;
+  border-radius: 20rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: #333;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.remember-forgot input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background: gold;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-container button:hover {
+  background: #F8F1E7;
+  color: black;
+}
+
+.login-container .login-box a {
+  color: gold;
+  text-decoration: none;
+}
+
+.login-container .login-box a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container {
+  animation: fadeInUp 1s ease-out;
+}
+.login-box input,
+.login-box button {
+  transition: all 0.4s ease;
 }

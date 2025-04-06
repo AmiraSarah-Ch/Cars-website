@@ -30,7 +30,6 @@ function filterModels() {
     });
 }
 
-
 function buyCar(event) {
     event.preventDefault();
 
@@ -39,7 +38,7 @@ function buyCar(event) {
 
     if (!isLoggedIn) {
         alert("Please log in to proceed with your purchase.");
-        window.location.href = "login.html"; // Redirige vers la page de connexion
+        window.location.href = "login.html"; 
         return;
     }
 
@@ -47,6 +46,41 @@ function buyCar(event) {
     document.getElementById("purchaseForm").style.display = "block";
 }
 
+document.querySelector('#login-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // empêche le rechargement
+
+    const username = document.querySelector('#username').value;
+    const password = document.querySelector('#password').value;
+
+
+    if (username === "admin@gmail.com" && password === "1234") {
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "../html/collection.html";
+    } else {
+        alert("Wrong credentials, please try again.");
+    }
+});
+
+
+const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+document.querySelectorAll('.buy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (isLoggedIn === "true") {
+            // Afficher le formulaire d’achat
+            document.querySelector('.purchase-form').style.display = 'block';
+        } else {
+            // Afficher une alerte ou une carte demandant de se connecter
+            document.querySelector('.login-alert-card').style.display = 'block';
+        }
+    });
+});
+
+
+document.querySelector('#logout-btn').addEventListener('click', () => {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "index.html"; // ou page de login
+});
 
 
 const msg = document.querySelector(".form-message");
