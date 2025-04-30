@@ -6,71 +6,66 @@ function closeMenu() {
     document.getElementById("sideMenu").style.width = "0";
 }
 
-function filterModels() {
-    const brand = document.getElementById("brandFilter").value;
-    const year = document.getElementById("yearFilter").value;
-    const type = document.getElementById("typeFilter").value;
-
-    const cards = document.querySelectorAll(".model-card");
-
-    cards.forEach(card => {
-        const cardBrand = card.getAttribute("data-brand");
-        const cardYear = card.getAttribute("data-year");
-        const cardType = card.getAttribute("data-type");
-
-        if (
-            (brand === "all" || cardBrand === brand) &&
-            (year === "all" || cardYear === year) &&
-            (type === "all" || cardType === type)
-        ) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
-    });
-}
-
 function buyCar(event) {
     event.preventDefault();
-
-    // Vérifier si l'utilisateur est connecté (exemple : avec localStorage ou session)
     let isLoggedIn = localStorage.getItem("userLoggedIn");
-
     if (!isLoggedIn) {
         alert("Please log in to proceed with your purchase.");
-        window.location.href = "login.html"; 
+        window.location.href = "../html/collection.php"; 
         return;
     }
+    document.getElementById("purchaseForm").style.display ="block";
+}
+document.addEventListener('DOMContentLoaded', function () {
 
-    // Si connecté, afficher le formulaire d'achat
-    document.getElementById("purchaseForm").style.display = "block";
+const loginForm = document.querySelector('#login-form');
+const usernameInput = document.querySelector('#username');
+const passwordInput = document.querySelector('#password');
+
+if (!loginForm || !usernameInput || !passwordInput) {
+  console.error("Login form or inputs not found in the DOM!");
+} else {
+  loginForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    
+    fetch("../process_login.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: `email=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+    })
+      .then(response => response.text())
+      .then(data => {
+        if (data === "success") {
+          localStorage.setItem("userLoggedIn", "true");
+          window.location.href = "../html/collection.php";
+        } else {
+          alert("User not found, please try again.");
+        }
+      })
+      .catch(error => {
+        console.error("Error during login request:", error);
+        alert("not found. Please try again.");
+      });
+    
+
+  });
 }
 
-document.querySelector('#login-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // empêche le rechargement
-
-    const username = document.querySelector('#username').value;
-    const password = document.querySelector('#password').value;
-
-
-    if (username === "admin@gmail.com" && password === "1234") {
-        localStorage.setItem("isLoggedIn", "true");
-        window.location.href = "../html/collection.html";
-    } else {
-        alert("Wrong credentials, please try again.");
-    }
-});
-
-
+  });
+  
 const isLoggedIn = localStorage.getItem("isLoggedIn");
 
 document.querySelectorAll('.buy-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         if (isLoggedIn === "true") {
-            // Afficher le formulaire d’achat
             document.querySelector('.purchase-form').style.display = 'block';
         } else {
-            // Afficher une alerte ou une carte demandant de se connecter
             document.querySelector('.login-alert-card').style.display = 'block';
         }
     });
@@ -79,9 +74,8 @@ document.querySelectorAll('.buy-btn').forEach(btn => {
 
 document.querySelector('#logout-btn').addEventListener('click', () => {
     localStorage.removeItem("isLoggedIn");
-    window.location.href = "index.html"; // ou page de login
+    window.location.href = "index.php"; 
 });
-
 
 const msg = document.querySelector(".form-message");
 
@@ -111,3 +105,22 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+
+
+const buttons = document.querySelectorAll('.book-btn');
+  const form = document.getElementById('booking-form');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // vérifier si l'utilisateur est loggé (pseudo code)
+      const loggedIn = false; // à remplacer par une vraie vérification
+
+      if (!loggedIn) {
+        alert("Please log in to book a car.");
+        window.location.href = "login.php"; // ou afficher une carte JS
+      } else {
+        form.classList.remove('hidden');
+      }
+    });
+  });

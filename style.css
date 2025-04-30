@@ -173,6 +173,7 @@ html::-webkit-scrollbar-thumb{
   color: gold;
 }
 .models-page .row{
+
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   gap: .7rem;
@@ -564,7 +565,7 @@ margin-bottom: 1.3rem;
 }
 .login{
   font-family: 'Arial', sans-serif;
-  background: rgba(0, 0, 0, 0.228);
+  background: rgba(255, 0, 0, 0.228);
   color: #F8F1E7;
   margin: 0;
   height: 100vh;
@@ -588,7 +589,7 @@ margin-bottom: 1.3rem;
 
 .login-container .logo {
   width: 120px;
-  margin-bottom: rem;
+  margin-bottom: 2rem;
   border-radius: 20rem;
 }
 
@@ -659,3 +660,127 @@ input[type="password"] {
 .login-box button {
   transition: all 0.4s ease;
 }
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.form-ctn{
+  width: 500px;
+  padding: 20px;
+}
+
+.collform label {
+  margin-bottom: .5rem;
+  display: block;
+  color: #3e4455;
+}
+
+.collform .input-control {
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 14px;
+}
+
+.collform .contact-msg {
+  border-radius: 14px;
+  height: 150px;
+  line-height: 1.2;
+  padding: 20px 30px;
+  width: 100%;
+  resize: none;
+}
+
+.location-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.location-intro h2 {
+  font-size: 2.5rem;
+  color: #F8F1E7;
+}
+
+.location-intro p {
+  font-size: 1.2rem;
+  color: #c1c1c1;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.car-card {
+  background-color: white;
+  color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.car-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.car-card h3 {
+  margin: 0.5rem 0;
+}
+
+.book-btn {
+  background-color: black;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #c4a755;
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.booking-form input,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.booking-form button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: #c4a755;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
