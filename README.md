@@ -36,24 +36,3 @@ Accède au projet via :
 arduino
 
 http://localhost/vintage-veloce/html/index.php
-📁 Structure des dossiers
-vintage-veloce/
-├── html/
-│   ├── index.php
-│   ├── collection.php
-│   ├── formulaire.php
-│   ├── valider_achat.php
-│   └── ...
-├── img/             # Images des voitures
-├── js/              # Fichiers JavaScript
-├── style.css        # Fichier de styles
-├── database.php     # Connexion MySQL
-└── database.sql     # Fichier SQL de structure + données
-✅ À faire
-Ajouter un espace administrateur
-
-Sécuriser les mots de passe (hashage)
-
-Ajouter la gestion du panier
-
-Vérification des doublons sur inscription
